@@ -21,7 +21,7 @@ export default function RootLayout({
     <html lang="en">
     <UserProvider>
       <body className={inter.className}>
-      <header className="bg-white h-10">
+      <header className="bg-white h-10 fixed top-0 w-full z-50">
         <nav className="mx-auto flex items-center justify-between p-2 lg:px-8 lg:gap-x-24">
           <Link href="/" className="text-sm font-extrabold font-mono leading-6 text-gray-900">
             Coffee World Map
