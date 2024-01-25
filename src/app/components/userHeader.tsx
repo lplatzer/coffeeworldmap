@@ -1,6 +1,7 @@
 "use client";
 
 import {useUser} from "@auth0/nextjs-auth0/client";
+import Link from "next/link";
 
 export default function UserHeader() {
     const { user, error, isLoading } = useUser();
@@ -27,8 +28,9 @@ export default function UserHeader() {
                             </a>
                         )}
                         {user && (
-                            <div>
+                            <div className="flex flex-col items-center">
                                 <p>{user.name}</p>
+                                <Link href="/admin">Admin Dashboard</Link>
                                 <a href="/api/auth/logout">
                                     Logout
                                 </a>
